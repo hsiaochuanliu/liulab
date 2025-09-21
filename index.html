@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lab Template</title>
+  <meta name="description" content="Static capture of a lab website layout with Home, Research, Publications, People, News & Events, and Contact sections." />
+  <style>
+    :root{--bg:#ffffff;--text:#0f172a;--muted:#475569;--brand:#00274C;--accent:#FFCB05;--card:#f8fafc;--border:#e2e8f0;--radius:14px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{position:sticky;top:0;background:#ffffffd9;border-bottom:1px solid var(--border);backdrop-filter:saturate(160%) blur(10px);z-index:40}
+    .container{max-width:1100px;margin:0 auto;padding:22px}
+    .nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:40px;height:40px;border-radius:9px;background:linear-gradient(135deg,var(--brand),var(--accent))}
+    nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+    nav a{font-weight:700;color:var(--text)}
+
+    .hero{padding:56px 0 24px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .hero h1{margin:0 0 8px;font-size:40px}
+    .hero p{margin:0;color:var(--muted)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+
+    section{padding:26px 0}
+    h2{margin:0 0 12px}
+    .grid{display:grid;gap:18px}
+    .grid.two{grid-template-columns:1fr 1fr}
+    .grid.three{grid-template-columns:repeat(3,1fr)}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid.two,.grid.three{grid-template-columns:1fr}}
+
+    .footer{margin-top:28px;border-top:1px solid var(--border);padding:22px 0;color:var(--muted);font-size:14px}
+    .note{font-size:12px;color:var(--muted)}
+    .pill{background:#eef2ff;border:1px solid #c7d2fe;padding:8px 10px;border-radius:999px;font-size:12px;display:inline-block}
+    ul.clean{margin:8px 0 0 18px}
+    .seo{background:#fff7ed;border:1px solid #fed7aa}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><div class="logo" aria-hidden="true"></div><strong>Lab Template</strong></div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#people">People</a></li>
+          <li><a href="#news">News & Events</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <div>
+        <h1>Lab Template</h1>
+        <p>Welcome to the Principal Investigator lab website. Explore our research, publications, and team members, or contact us to learn more.</p>
+        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="pill" href="#research">What We Do</a>
+          <a class="pill" href="#publications">What We Write</a>
+          <a class="pill" href="#people">Who We Are</a>
+          <a class="pill" href="#contact">How To Find Us</a>
+        </div>
+      </div>
+      <aside class="card seo">
+        <strong>Suggestions for Search Engine Optimization (SEO)</strong>
+        <ul class="clean">
+          <li>~200‑word introduction of the lab</li>
+          <li>Layperson description of research</li>
+          <li>Include: Lab name and PI name</li>
+          <li>If there are clinical applications, link to patient‑facing sites for care</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="research" class="card">
+      <h2>Research</h2>
+      <p>Summarize your themes and active projects. Add representative images or figures (static files only) and short blurbs linking to subpages if needed.</p>
+      <ul class="clean">
+        <li>Theme A – one‑sentence overview.</li>
+        <li>Theme B – one‑sentence overview.</li>
+        <li>Theme C – one‑sentence overview.</li>
+      </ul>
+    </section>
+
+    <section id="publications" class="card">
+      <h2>Publications</h2>
+      <p>List selected peer‑reviewed articles and preprints. Link to PDFs or journals. Group by year if the list is long.</p>
+      <ul class="clean">
+        <li>Author, <em>Title</em>, Journal, Year. <a href="#">PDF</a></li>
+        <li>Author, <em>Title</em>, Journal, Year. <a href="#">PDF</a></li>
+      </ul>
+    </section>
+
+    <section id="people" class="card">
+      <h2>People</h2>
+      <p>Introduce the PI and lab members. Include headshots, roles, and links to CV, Google Scholar, or LinkedIn if desired.</p>
+      <ul class="clean">
+        <li>PI – short bio.</li>
+        <li>Graduate Student – research area.</li>
+        <li>Undergraduate – project.</li>
+      </ul>
+    </section>
+
+    <section id="news" class="card">
+      <h2>News &amp; Events</h2>
+      <ul class="clean">
+        <li><strong>Sep 2025</strong> – Example news item.</li>
+        <li><strong>Aug 2025</strong> – Example news item.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:yourlab@university.edu">yourlab@university.edu</a></p>
+      <p>Address: Department, University, City, State</p>
+    </section>
+
+    <div class="footer">
+      <div>© <span id="year"></span> Your Institution. Replace footer text and policies with your own.</div>
+      <div class="note" style="margin-top:6px">This static capture replicates the public layout and headings of the referenced lab template; replace placeholders and branding with your own. Do not include third‑party logos or marks you do not own.</div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
